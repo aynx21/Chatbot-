@@ -1,0 +1,28 @@
+import nltk
+from nltk.chat.util import Chat, reflections
+
+reflections ={
+    "I am" : "you are"
+
+}
+pairs ={
+    [
+        r"my name is (.*)",
+        ["hello %1, Kia hal hai apka ? ",]
+
+    ],
+    [
+        r"hi|hello|hey",
+        ["Hello","Kia huaa",]
+    ]
+}
+#calling function
+def chat():
+    print("Welcome to my personalized chatbot")
+    chat = Chat(pairs,reflections)
+    chat.converse()
+
+#now running function
+
+if __name__ =="__main__":
+    chat()
